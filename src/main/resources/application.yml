@@ -1,0 +1,16 @@
+spring:
+  redis:
+    database: 9
+    host: 106.15.28.147
+    port: 6379
+    password: 74b7726243b7493184b95124b45d3674
+    timeout: 30s
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/static/
+server:
+  port: 8991
