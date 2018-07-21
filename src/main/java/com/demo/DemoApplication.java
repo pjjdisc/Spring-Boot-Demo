@@ -1,5 +1,6 @@
 package com.demo;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -10,6 +11,7 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.servlet.DispatcherServlet;
 
 @SpringBootApplication
+@MapperScan(basePackages = "com.demo.mapper")
 public class DemoApplication {
 
     public static void main(String[] args) {

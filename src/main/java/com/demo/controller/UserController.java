@@ -39,4 +39,16 @@ public class UserController {
             return new RestResponse(1, "用户名或密码错误！");
         }
     }
+
+    @RequestMapping("/detail")
+    public RestResponse get(@RequestParam Long id){
+        DemoMembersPojo user = userService.getUserById(id);
+        return new RestResponse(user);
+    }
+
+    @RequestMapping("/redis-detail")
+    public RestResponse get(@RequestParam String auth){
+        DemoMembersPojo user = (DemoMembersPojo)redisConfig.get(auth);
+        return new RestResponse(user);
+    }
 }

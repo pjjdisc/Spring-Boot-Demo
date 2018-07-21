@@ -1,7 +1,9 @@
 package com.demo.base;
 
+import org.apache.ibatis.annotations.InsertProvider;
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;
+import tk.mybatis.mapper.provider.base.BaseInsertProvider;
 
 /**
  * @author Eddy

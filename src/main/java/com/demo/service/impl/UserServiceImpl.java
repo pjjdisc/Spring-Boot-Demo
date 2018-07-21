@@ -19,11 +19,13 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public DemoMembersPojo getUserByUserName(String userName) {
-        return userMapper.getUserByUserName(userName);
+        DemoMembersPojo pojo = new DemoMembersPojo();
+        pojo.setUserName(userName);
+        return userMapper.selectOne(pojo);
     }
 
     @Override
     public DemoMembersPojo getUserById(Long id) {
-        return userMapper.getUserById(id);
+        return userMapper.selectByPrimaryKey(id);
     }
 }
